@@ -1,0 +1,204 @@
+/*--------------------- 13- Booking Area CSS (Start) ---------------------*/
+.book-table{
+  position: fixed;
+  top: -150%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10000;
+}
+
+.book-table.active{
+  top: 0;
+}
+
+.book-table #close-booking-form{
+  position: absolute;
+  top:1rem; right:1rem;
+  font-size: 5rem;
+  color:var(--yellow);
+  cursor: pointer;
+}
+
+.book-table .form{
+  width: 60rem;
+  background-color: var(--white);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  padding: 2rem;
+  text-align: center;
+  max-height: 90%;
+  overflow-y: auto;
+}
+
+.book-table .form::-webkit-scrollbar{
+  width: 0.8rem;
+}
+
+.book-table .form::-webkit-scrollbar-thumb{
+  border-radius: 1rem;
+  background-color: #0a0903;
+}
+
+.book-table .form::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+.book-table .form h2{
+  font-size: 2.5rem;
+  color: var(--yellow);
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.book-table .form .box {
+  width: 100%;
+  background: transparent;
+  border: 0.1rem solid var(--black);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: var(--black);
+  text-transform: none;
+}
+
+.book-table .form .input-box{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.book-table .form .input-box .box{
+  width: 49%;
+}
+
+.book-table .form .box::placeholder {
+  color: var(--grey);
+  text-transform: capitalize;
+}
+
+.book-table .form .box:focus {
+  background: transparent;
+}
+
+.book-table .form textarea {
+  height: 18rem;
+  resize: none;
+}
+
+/*--------------------- 13- Contact Form Area CSS (Start) ---------------------*/
+
+.order-form{
+  position: fixed;
+  top: -150%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10000;
+}
+
+.order-form.active{
+  top: 0;
+}
+
+.order-form #close-order-form{
+  position: absolute;
+  top:1rem; right:1rem;
+  font-size: 5rem;
+  color:var(--yellow);
+  cursor: pointer;
+}
+
+.order-form .form{
+  width: 60rem;
+  background-color: var(--white);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  padding: 2rem;
+  text-align: center;
+  max-height: 90%;
+  overflow-y: auto;
+}
+
+.order-form .form::-webkit-scrollbar{
+  width: 0.8rem;
+}
+
+.order-form .form::-webkit-scrollbar-thumb{
+  border-radius: 1rem;
+  background-color: #0a0903;
+}
+
+.order-form .form::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+.order-form .form h2{
+  font-size: 2.5rem;
+  color: var(--yellow);
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.order-form .form .box {
+  width: 100%;
+  background: transparent;
+  border: 0.1rem solid var(--black);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: var(--black);
+  text-transform: none;
+}
+
+.order-form .form .input-box{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.order-form .form .input-box .box{
+  width: 49%;
+}
+
+.order-form .form .box::placeholder {
+  color: var(--grey);
+  text-transform: capitalize;
+}
+
+.order-form .form .box:focus {
+  background: transparent;
+}
+
+.order-form .form textarea {
+  height: 18rem;
+  resize: none;
+}

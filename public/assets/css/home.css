@@ -1,0 +1,70 @@
+
+
+.home{
+  width: 100%;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 1px;
+  min-height: 100vh;
+  position: relative;
+}
+
+.home-slider{
+  position: relative;
+}
+
+.home-slider .swiper-pagination-bullet{
+  height: 1.5rem;
+  width: 1.5rem;
+  background: var(--white);
+}
+
+.home-slider .swiper-pagination-bullet-active{
+  width: 3.5rem;
+  background: var(--yellow);
+}
+
+.home-item img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.home-item .content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.home-item .content .text{
+  text-align: center;
+  width: 70rem;
+}
+
+.home-item .content .text h2{
+  font-family: 'Dancing Script', cursive;
+  font-size: 5rem;
+  letter-spacing: 1px;
+  color: var(--white);
+}
+
+.home-item .content .text p {
+  line-height: 1.4;
+  font-size: 2rem;
+  padding: 1rem 0;
+  color: var(--white);
+}

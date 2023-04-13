@@ -1,0 +1,67 @@
+.contact .box-container{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact iframe{
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 40rem;
+      flex: 1 1 40rem;
+}
+
+.contact .form{
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 40rem;
+      flex: 1 1 40rem;
+  background-color: #f7f7f7;
+  /*background-color: var(--white);*/
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact .form h2{
+  font-size: 2.5rem;
+  color: var(--yellow);
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.contact .form .box {
+  width: 100%;
+  background: transparent;
+  border: 0.1rem solid var(--black);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: var(--black);
+  text-transform: none;
+}
+
+.contact .form .box::placeholder {
+  color: var(--grey);
+  text-transform: capitalize;
+}
+
+.contact .form .box:focus {
+  background: transparent;
+}
+
+.contact .form textarea {
+  height: 18rem;
+  resize: none;
+}
+
+.contact .alert{
+  font-size: 2rem;
+  color: var(--yellow);
+  padding-left: 1rem;
+}

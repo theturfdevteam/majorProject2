@@ -1,0 +1,103 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&amp;display=swap');
+
+:root {
+	--yellow: #F7B32B;
+    --black: #0a0903;
+    --white: #fff;
+    --grey: #666;
+    --border-radius: 1rem;
+    --box-shadow: 1px 0px 8px -3px rgba(0, 0, 0, 0.2);
+}
+
+.cart {
+  box-shadow: 0 0 5px #DDD;
+  padding: 20px;
+}
+
+*{
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+
+  outline: none;
+  border: none;
+
+  text-transform: capitalize;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.6%;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--yellow);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--black);
+  border-radius: 0.5rem;
+}
+
+body {
+  background-color: rgba(247, 179, 43, 0.1)
+}
+
+.medium-4 h3{
+  color: var(--black);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.medium-4 span {
+  color: var(--yellow);
+  font-size: 1rem;
+}
+
+.heading h2{
+  font-family: 'Dancing Script', cursive;
+  color: var(--black);
+  text-align: center;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.heading span {
+  font-family: 'Dancing Script', cursive;
+  color: var(--yellow);
+  text-transform: uppercase;
+}
+
+section {
+	margin-top: 80px;
+}
+
+.navgap1 {
+	height: 50px;
+}
+.navgap2 {
+	height: 100px;
+}
+
+#clear1 {
+	font-size: 2rem;
+}

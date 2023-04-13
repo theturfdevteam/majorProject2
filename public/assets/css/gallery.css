@@ -1,0 +1,114 @@
+.gallery-container .controls{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+  list-style-type: none;
+  margin-top: 2rem;
+}
+
+.gallery-container .controls .button{
+  display: inline-block;
+  font-size: 2rem;
+  border: 1.5px solid transparent;
+  text-decoration: none;
+  color: var(--black);
+  padding: 0.7rem 1.5rem;
+}
+
+.gallery-container .controls .button.active,
+.gallery-container .controls .button:hover{
+  background-color: var(--yellow);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.gallery-container .box-container{
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 0.5rem;
+  margin: 2rem 0;
+}
+
+.gallery-item{
+  height: 20rem;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.1);
+}
+
+.gallery-item img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.gallery-item .view{
+  position: absolute;
+  top: -100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.gallery-item .view a{
+  color: var(--black);
+  font-size: 3rem;
+}
+
+.gallery-item:hover .view{
+  top: 0;
+}
+
+.gallery-item .content{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0rem;
+  left: 0rem;
+  padding: 1rem;
+}
+
+.gallery-item .content h4{
+  color: var(--yellow);
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.gallery-item .content p{
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 400;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}

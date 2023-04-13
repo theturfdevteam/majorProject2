@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Booking Form</title>
+	<link rel="stylesheet" type="text/css" href="/css/booking.css">
+</head>
+<body>
+	<div class="form-wrapper">
+		<h2>Booking Form</h2>
+		<form action="booking" method="POST">
+			<div class="input-group">
+				<label for="fname">First Name</label>
+				<input type="text" id="fname" name="fname" pattern="[A-Za-z]+" required>
+			</div>
+			<div class="input-group">
+				<label for="lname">Last Name</label>
+				<input type="text" id="lname" name="lname" pattern="[A-Za-z]+" required>
+			</div>
+			<div class="input-group">
+				<label for="phone">Phone Number</label>
+				<input type="tel" id="phone" name="phone" pattern="[6-9]{1}[0-9]{9}" required><br>
+				<small>Valid phone numbers should have 10 digits and start with 6, 7, 8, or 9.</small><br><br>
+			</div>
+			<div class="input-group">
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@gmail\.com" required>
+			</div>
+			<div class="input-group">
+				<label for="num-people">Number of People</label>
+				<input type="number" id="num-people" name="num-people" required>
+			</div>
+			<div class="input-group">
+				<label for="booking-time">Time of Booking</label>
+				<input type="datetime-local" id="booking-time" name="booking-time" required>
+			</div>
+			<div class="input-group">
+				<button type="submit">Book Now</button>
+			</div>
+		</form>
+		<script>
+			var bookingTimeInput = document.getElementById("booking-time");
+			bookingTimeInput.addEventListener("input", function () {
+				var selectedTime = new Date(this.value);
+				var currentTime = new Date();
+				var oneWeekFromNow = new Date();
+				oneWeekFromNow.setDate(oneWeekFromNow.getDate() + 7);
+
+				if (selectedTime < currentTime) {
+					this.setCustomValidity("Booking time cannot be in the past.");
+				} else if (selectedTime > oneWeekFromNow) {
+					this.setCustomValidity("Booking date should be within the next week from now.");
+				} else {
+				// } else if (selectedTime.getHours() < 8 || selectedTime.getHours() >= 20) {
+				// 	this.setCustomValidity("Booking time should be between 8:00 AM and 8:00 PM.");
+				// } else {
+					this.setCustomValidity("");
+				}
+			});
+		</script>
+		<script>
+			// Get the input field for the number of people
+			var numPeopleField = document.getElementById("num-people");
+
+			// Set the minimum and maximum values for the input field
+			numPeopleField.min = 2;
+			numPeopleField.max = 22;
+
+			// Add an event listener to the input field to validate the number of people
+			numPeopleField.addEventListener("input", function () {
+				var numPeople = parseInt(this.value);
+				if (isNaN(numPeople) || numPeople < 2) {
+					this.setCustomValidity("Please enter a valid number of people (minimum 2).");
+				} else if (numPeople > 22) {
+					this.setCustomValidity("The maximum number of people is 22.");
+				} else {
+					this.setCustomValidity("");
+				}
+			});
+		</script>
+	</div>
+</body>
+</html>

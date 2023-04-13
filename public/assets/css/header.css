@@ -1,0 +1,107 @@
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
+
+  padding: 2rem 5%;
+  background: transparent;
+
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.header.sticky{
+  background: var(--black);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+}
+
+.header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.header .logo i{
+  font-size: 2.5rem;
+  color: var(--yellow);
+  padding-right: 1rem;
+}
+
+.header .logo h2{
+  font-family: 'Dancing Script', cursive;
+  color: var(--white);
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+}
+
+.header .logo h2 span{
+  font-family: 'Dancing Script', cursive;
+  color: var(--yellow);
+}
+
+.header .navbar a{
+  display: inline-block;
+  font-size: 1.8rem;
+  color: var(--white);
+  margin: 0 0.5rem
+}
+
+.header .navbar a:hover,
+.header .navbar a.active{
+  color: var(--yellow);
+}
+
+.header .booking-btn{
+  display: inline-block;
+  font-size: 2rem;
+  background: transparent;
+  border: 1.5px solid var(--white);
+  text-decoration: none;
+  color: var(--white);
+  padding: 0.7rem 1.5rem;
+}
+
+.header .booking-btn:hover {
+  cursor: pointer;
+  background: var(--yellow);
+  border-color: var(--yellow);
+}
+
+.header .order-btn{
+  display: inline-block;
+  font-size: 2rem;
+  background: transparent;
+  border: 1.5px solid var(--white);
+  text-decoration: none;
+  color: var(--white);
+  padding: 0.7rem 1.5rem;
+}
+
+.header .order-btn:hover {
+  cursor: pointer;
+  background: var(--yellow);
+  border-color: var(--yellow);
+}

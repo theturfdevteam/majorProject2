@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Booking Form</title>
+	<link rel="stylesheet" type="text/css" href="/css/booking.css">
+</head>
+<body>
+
+	<div class="form-wrapper">
+
+		<h2>Booking Form</h2>
+
+		<form action="booking" method="POST">
+
+			<div class="input-group">
+				<label for="fname">First Name</label>
+				<input type="text" id="fname" name="fname" required>
+			</div>
+
+			<div class="input-group">
+				<label for="lname">Last Name</label>
+				<input type="text" id="lname" name="lname" required>
+			</div>
+
+			<div class="input-group">
+				<label for="phone">Phone Number</label>
+				<input type="tel" id="phone" name="phone" required>
+			</div>
+
+			<div class="input-group">
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email" required>
+			</div>
+
+			<div class="input-group">
+				<label for="num-people">Number of People</label>
+				<input type="number" id="num-people" name="num-people" required>
+			</div>
+
+			<div class="input-group">
+				<label for="booking-time">Time of Booking</label>
+				<input type="datetime-local" id="booking-time" name="booking-time" required>
+			</div>
+
+			<div class="input-group">
+				<button type="submit" value="Book">Book Now</button>
+			</div>
+			
+		</form>
+
+	</div>
+
+</body>
+</html>

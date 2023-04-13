@@ -1,0 +1,60 @@
+body {
+	background-image: url('https://pixabay.com/get/g7a749c47c261d8c07ab74341e8b0ef3764b23b780752d3d28b725ccd6d41545835d716a5500fd6cd766b889887d20a6d21c92978b1f3d2c4c1da21aafa84e0263956bfa9c076194ad209cfc7b4d40eb1_1920.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.form-wrapper {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #f2f2f2;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.input-group {
+	flex-basis: calc(50% - 10px);
+	margin-bottom: 20px;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+input[type=text], input[type=email], input[type=tel], input[type=number], input[type=datetime-local] {
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	background-color: #f9f9f9;
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+button[type=submit] {
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+button[type=submit]:hover {
+	background-color: #3e8e41;
+}

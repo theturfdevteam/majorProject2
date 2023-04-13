@@ -1,0 +1,132 @@
+
+.footer {
+  background-color: #313f2c;
+  /*background-color: var(--black);*/
+  padding: 0 2rem;
+}
+
+.footer .box-container{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.footer-item{
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 33rem;
+      flex: 1 1 33rem;
+}
+
+.footer-item h2{
+  color: var(--white);
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  padding-bottom: 2rem;
+}
+
+.footer-item p{
+  color: var(--white);
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+
+.footer-item .info p{
+  display: block;
+  font-size: 1.6rem;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.footer-item .info i{
+  color: var(--yellow);
+    padding-right: 1rem;
+}
+
+.footer-item .info .gmail{
+  text-transform: none;
+}
+
+.footer-item .social{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.footer-item .social a{
+    display: inline-block;
+    height: 4rem;
+    width: 4rem;
+    background-color: var(--white);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.footer-item .social a i{
+    color: var(--yellow);
+    font-size: 2rem;
+}
+
+.footer-item .social a:hover{
+    background-color: var(--yellow);
+}
+
+.footer-item .social a:hover i{
+    color: #fff;
+}
+
+.footer-item .timing h3{
+  color: var(--yellow);
+  font-size: 2rem;
+}
+
+.footer-item .timing p{
+  margin: 0.5rem 0;
+}
+
+.footer-item .links a,
+.footer-item .iinks p{
+  display: block;
+  font-size: 1.6rem;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.footer-item .links a i,
+.footer-item .links p i{
+    padding-right: 0.5rem;
+    color: var(--yellow);
+}
+
+.footer-item .links a:hover i{
+  padding-right: 1.5rem;
+}
+
+.footer .content{
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 0.2rem solid #fff;
+}
+
+.footer .content p{
+    font-size: 2rem;
+    color: #fff;
+}
+
+.footer .content p span{
+    color: var(--yellow);
+}

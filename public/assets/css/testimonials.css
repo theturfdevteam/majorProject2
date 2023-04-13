@@ -1,0 +1,79 @@
+
+
+.testimonial-slider{
+  position: relative;
+  padding: 2rem 0 4rem 0;
+  overflow: hidden;
+}
+
+.testimonial-slider .swiper-pagination-bullet{
+  background: #666;
+}
+
+.testimonial-slider .swiper-pagination-bullet-active{
+  background: var(--yellow);
+}
+
+.testimonial .testi-item{
+  padding: 1rem 2rem;
+  background: var(--white);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+}
+
+.testimonial .testi-item:hover{
+  -webkit-box-shadow: var(--box-shadow-hover);
+          box-shadow: var(--box-shadow-hover);
+}
+
+.testimonial .testi-item .intro{
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.testimonial .testi-item .image {
+  height: 12rem;
+  width: 12rem;
+}
+
+.testimonial .testi-item .image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 0.3rem solid var(--yellow);
+  padding: 0.3rem;
+}
+
+.testimonial .testi-item .intro .content h3 {
+  padding-bottom: 1rem;
+  font-size: 2.3rem;
+}
+
+.testimonial .testi-item .intro .content h5 {
+  color: var(--yellow);
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.testimonial .testi-item .rating{
+  margin: 1rem 0;
+}
+
+.testimonial .testi-item .rating i {
+  color: var(--yellow);
+  font-size: 1.8rem;
+}
+
+.testimonial .testi-item p{
+  color: var(--grey);
+  font-size: 1.6rem;
+  line-height: 1.6;
+  padding: 1rem 0;
+}

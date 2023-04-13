@@ -1,0 +1,110 @@
+
+.about{
+  overflow: hidden;
+}
+
+.about .box-container{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about .image{
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 40rem;
+      flex: 1 1 40rem;
+  height: 50rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.about .image h4{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 3.5rem;
+  font-weight: bolder;
+  font-family: 'Dancing Script', cursive;
+  color: var(--white);
+}
+
+.about .image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about .content{
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 40rem;
+      flex: 1 1 40rem;
+  overflow: hidden;
+}
+
+.about .content h1{
+  font-family: 'Dancing Script', cursive;
+  font-size: 4rem;
+  color: var(--yellow);
+  padding-bottom: 1.5rem;
+}
+
+.about .content p{
+  font-size: 2.2rem;
+  color: var(--grey);
+  line-height: 1.6;
+  padding-bottom: 1.5rem;
+  text-transform: none;
+  text-align: justify;
+}
+
+.about .content .btn {
+  padding-top: 1rem;
+}
+
+.about-info{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 3rem;
+}
+
+.about-info .info-box{
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 15rem;
+      flex: 1 1 15rem;
+  border: 0.2rem solid var(--black);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.about-info .info-box i{
+  font-size: 4rem;
+  color: var(--yellow);
+}
+
+.about-info .info-box .count{
+  font-size: 3rem;
+  padding: 1rem 0;
+}
+
+.about-info .info-box h5{
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--grey);
+}
