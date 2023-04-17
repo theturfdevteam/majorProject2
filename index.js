@@ -17,6 +17,7 @@ const bodyParser = require("body-parser")
 
 const app = express();
 
+
 app.use(express.static('public'))
 app.use(express.urlencoded({extended: false}))
 app.use(flash())
@@ -27,16 +28,12 @@ app.use(session({
 }))
 app.use(passport.initialize()) 
 app.use(passport.session())
-//app.use(methodOverride("_method"))
+app.use(methodOverride("_method"))
 
 app.get("/",(req,res)=>{
     res.redirect("/user/home")
 })
 app.use("/user",router);
-
-
-
-
 
 
 app.listen(port,()=>{

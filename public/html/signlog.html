@@ -28,10 +28,10 @@
                <label for="signup" class="slide signup">Signup</label>
                <div class="slider-tab"></div>
             </div>
+            
             <div class="form-inner">
 
                <!---- Login ---->
-
                <form action="login" method="post" class="login">
                   <div class="field">
                      <input type="email" name="email" maxlength="30" placeholder="email">
@@ -42,11 +42,11 @@
                   <div class="pass-link">
                      <a href="signupPage">Not a user? Register here</a>
                   </div>
-                  <% if (messages.error) { %>
-                     <div class="alert alert-danger">
-                       <strong><%= messages.error %> </strong>
-                     </div>
-                   <% } %>
+
+                  <div class="displayerr">
+                     <!-- error was caught here by ejs template -->
+                  </div>
+                  
                   <div class="field btn">
                      <div class="btn-layer"></div>
                      <input type="submit" value="Login">
@@ -55,7 +55,7 @@
 
                <!---- Sign Up ---->
 
-               <form action="signup" method="post" class="signup">
+               <form action="signup" method="post" class="signup" id="signup">
                   <div class="field">
                      <input type="email" name="email" maxlength="30" placeholder="email">
                   </div>
@@ -64,9 +64,6 @@
                   </div>
                   <div class="field">
                      <input type="password" name="confirmpassword" minlength="7" maxlength="16" onkeydown="return/[a-z,0-9]/i.test(event.key)" placeholder="Confirm password" required>
-                  </div>
-                  <div class="field">
-
                   </div>
                   <div class="field btn">
                      <div class="btn-layer"></div>
@@ -85,9 +82,25 @@
          const signupBtn = document.querySelector("label.signup");
          const signupLink = document.querySelector("form .signup-link a");
 
+         signupBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "-50%";
+           loginText.style.marginLeft = "-50%";
+         });
+         loginBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "0%";
+           loginText.style.marginLeft = "0%";
+         });
+         signupLink.onclick = (()=>{
+           signupBtn.click();
+           return false;
+         });
+
          const passwordInput = document.querySelector('form.signup input[name="password"]');
          const confirmPasswordInput = document.querySelector('form.signup input[name="confirmpassword"]');
          const signUpButton = document.querySelector('form.signup input[type="submit"]');
+         //below two codes added by me to try to catch errors
+         const logInButton = document.querySelector('form.login input[type="submit"]');
+         const loginPasswordInput = document.querySelector('form.login input[name="password"]');
 
          confirmPasswordInput.addEventListener('keyup', () => {
          if (passwordInput.value !== confirmPasswordInput.value) {
@@ -105,18 +118,7 @@
          }
          });
 
-         signupBtn.onclick = (()=>{
-           loginForm.style.marginLeft = "-50%";
-           loginText.style.marginLeft = "-50%";
-         });
-         loginBtn.onclick = (()=>{
-           loginForm.style.marginLeft = "0%";
-           loginText.style.marginLeft = "0%";
-         });
-         signupLink.onclick = (()=>{
-           signupBtn.click();
-           return false;
-         });
+         
       </script>
    </body>
 </html>

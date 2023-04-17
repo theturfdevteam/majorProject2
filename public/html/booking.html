@@ -60,11 +60,9 @@
 		<script>
 			// Get the input field for the number of people
 			var numPeopleField = document.getElementById("num-people");
-
 			// Set the minimum and maximum values for the input field
 			numPeopleField.min = 2;
 			numPeopleField.max = 22;
-
 			// Add an event listener to the input field to validate the number of people
 			numPeopleField.addEventListener("input", function () {
 				var numPeople = parseInt(this.value);

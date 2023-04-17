@@ -7,7 +7,6 @@ const methodOverride = require("method-override")
 const path = require("path")
 router = express.Router();
 
-
 const initializePassport = require(path.resolve(__dirname,"../","passportconfig.js"))
 initializePassport(
     passport,
@@ -19,7 +18,7 @@ const users = []
 
 
 
-router.post("/signup", async(req,res) => {
+router.post("/signup", checkNotAuthenticated, async(req,res) => {
     try {
         const hashedPassword = await bcrypt.hash(req.body.password, 10)
         users.push({
@@ -31,11 +30,11 @@ router.post("/signup", async(req,res) => {
         res.redirect("loginPage")
     } catch (error) {
         console.log(error);
-        res.redirect("registerPage")
+        res.redirect("signupPage")
     }
 })
 
-router.post("/login", passport.authenticate("local", {
+router.post("/login", checkNotAuthenticated, passport.authenticate("local", {
     successRedirect: "/",
     failureRedirect: "loginPage",
     failureFlash: true
@@ -52,6 +51,7 @@ router.post("/booking",(req,res)=>{
     console.log(req.body)
     res.sendFile(path.resolve(__dirname,"../","public","html","booking.html"))
 })
+
 router.post("/contact",(req,res)=>{
     const formData = req.body;
     const collection = client.db('turfdata3').collection('contactus');
@@ -100,14 +100,28 @@ router.get("/home",(req,res)=>{
     //console.log(req.body)
     res.sendFile(path.resolve(__dirname,"../","public","html","home.html"))
 })
-router.get("/loginPage",(req,res)=>{
-    res.sendFile(path.resolve(__dirname,"../","public","signlog.html"))
+router.get("/loginPage",checkNotAuthenticated , (req,res)=>{
+    res.sendFile(path.resolve(__dirname,"../","public","html","signlog.html"))
 })
-router.get("/signupPage",(req,res)=>{
-    res.sendFile(path.resolve(__dirname,"../","public","signlog.html#signup"))
+router.get("/signupPage", checkNotAuthenticated , (req,res)=>{
+    res.sendFile(path.resolve(__dirname,"../","public","html","signlog.html#signup"))
 })
 router.get("/bookingPage",(req,res)=>{
     res.sendFile(path.resolve(__dirname,"../","public","html","booking.html"))
 })
+
+function checkAuthenticated(req, res, next){
+    if(req.isAuthenticated()){
+        return next()
+    }
+    res.redirect("loginPage")
+}
+
+function checkNotAuthenticated(req, res, next){
+    if(req.isAuthenticated()){
+        return res.redirect("/")
+    }
+    next()
+}
 
 module.exports = router;
